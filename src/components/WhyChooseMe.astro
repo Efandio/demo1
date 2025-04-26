@@ -1,0 +1,49 @@
+---
+    const data = [
+        {
+            id: '1',
+            title: 'Unmatched Expertise',
+            desc: 'With over a decade of experience, I know exactly how to make your vision a reality, no matter the occasion.',
+        },
+        {
+            id: '2',
+            title: 'Personalized Approach',
+            desc: 'Every project is unique to me. I take the time to understand your needs, ensuring that the photos I create are exactly what you’ve envisioned.',
+        },
+        {
+            id: '3',
+            title: 'Passion for Perfection',
+            desc: 'Every shot I take is carefully composed, edited, and perfected. My attention to detail guarantees that the final product will exceed your expectations.',
+        },
+        {
+            id: '4',
+            title: 'Proven Client Satisfaction',
+            desc: 'I’ve had the privilege of capturing countless important moments for my clients. My dedication to delivering high-quality, stunning results speaks for itself.',
+        },
+    ]
+---
+
+
+<main class="w-full h-full px-10">
+    <div class="space-y-3">
+        <h4 class="martel-bold text-xl md:text-2xl">Why Choose Me</h4>
+        <p class="martel-regular text-sm md:pr-80">After browsing through my gallery, I hope you can see that I don’t just capture moments—I bring them to life. Here’s why my clients keep coming back to me:</p>
+    </div>
+
+    {data.map((why, index) => (
+        <div class="grid grid-cols-2 mt-10 gap-2 ">
+            <div class={index % 2 === 0 ? 'order-last text-center flex justify-center items-center h-full' : 'text-center flex justify-center items-center h-full'}>
+                <h4 class="martel-regular text-xs md:text-sm text-center md:px-16">{why.desc}</h4>
+            </div>
+
+            <div class="flex w-full h-50 justify-center items-center rounded-lg bg-gradient-to-b from-black to-[#666666] px-2">
+                <span class="text-white text-center md:text-xl martel-bold">{why.title}</span>
+            </div>
+        </div>
+    ))}
+
+</main>
+
+<script>
+    console.log('TES')
+</script>

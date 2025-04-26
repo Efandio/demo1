@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Gallery from '../components/Gallery';
+import WhyChooseMe from '../components/WhyChooseMe.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+	
+	<section class="scroll-custom">
+		<Hero />
+
+		<About />
+
+		<Gallery client:load />
+
+		<WhyChooseMe />
+
+		<Contact />
+
+		<Footer />
+	</section>
+
+</Layout>
